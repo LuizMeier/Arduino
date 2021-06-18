@@ -1,6 +1,6 @@
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 2	 // input pin Neopixel is attached to
+#define PIN 2   // input pin Neopixel is attached to
 
 #define NUMPIXELS      4 // number of neopixels in strip
 
@@ -27,72 +27,72 @@ void setup() {
 
 
 void loop() {
-	
-	buttonState = digitalRead(1);
-	
-	if (buttonState == HIGH) {
-	  buttonCount = buttonCount + 1;
-	}
-	
-	// Green
-	if (buttonCount == 1) {
-		redColor = 0;
-		greenColor = 255;
-		blueColor = 0;
-	}
-	
-	// Blue
-	else if (buttonCount == 2) {
-		redColor = 0;
-		greenColor = 0;
-		blueColor = 255;
-	}
-	
-	// Red
-	else if (buttonCount == 3) {
-		redColor = 255;
-		greenColor = 0;
-		blueColor = 0;
-	}
+  
+  buttonState = digitalRead(1);
+  
+  if (buttonState == HIGH) {
+    buttonCount = buttonCount + 1;
+  }
+  
+  // Green
+  if (buttonCount == 1) {
+    redColor = 0;
+    greenColor = 255;
+    blueColor = 0;
+  }
+  
+  // Blue
+  else if (buttonCount == 2) {
+    redColor = 0;
+    greenColor = 0;
+    blueColor = 255;
+  }
+  
+  // Red
+  else if (buttonCount == 3) {
+    redColor = 255;
+    greenColor = 0;
+    blueColor = 0;
+  }
 
-	// Yellow
-	else if (buttonCount == 4) {
-		redColor = 255;
-		greenColor = 255;
-		blueColor = 0;
-	}
+  // Yellow
+  else if (buttonCount == 4) {
+    redColor = 255;
+    greenColor = 255;
+    blueColor = 0;
+  }
 
-	// Cyan
-	else if (buttonCount == 5) {
-		redColor = 0;
-		greenColor = 255;
-		blueColor = 255;
-	}
+  // Cyan
+  else if (buttonCount == 5) {
+    redColor = 0;
+    greenColor = 255;
+    blueColor = 255;
+  }
 
-	// Magenta
-	else if (buttonCount == 6) {
-		redColor = 255;
-		greenColor = 0;
-		blueColor = 255;
-	}
+  // Magenta
+  else if (buttonCount == 6) {
+    redColor = 255;
+    greenColor = 0;
+    blueColor = 255;
+  }
 
-	// White
-	else if (buttonCount == 7) {
-		redColor = 255;
-		greenColor = 255;
-		blueColor = 255;
-	}
+  // White
+  else if (buttonCount == 7) {
+    redColor = 255;
+    greenColor = 255;
+    blueColor = 255;
+  }
 
-	// Off
-	else if (buttonCount == 8) {
-		redColor = 255;
-		greenColor = 0;
-		blueColor = 0;
-	}
-	
-	else {
-	  buttonCount = 0;
-	}
+  // Off
+  else if (buttonCount == 8) {
+    redColor = 0;
+    greenColor = 0;
+    blueColor = 0;
+  }
+  
+  else {
+    buttonCount = 0;
+  }
 
   for (int i=0; i < NUMPIXELS; i++) {
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255

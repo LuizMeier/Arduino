@@ -83,7 +83,7 @@ void loop() {
 		blueColor = 255;
 	}
 
-	/ Off
+	// Off
 	else if (buttonCount == 8) {
 		redColor = 255;
 		greenColor = 0;

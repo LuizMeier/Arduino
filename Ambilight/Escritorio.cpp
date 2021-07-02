@@ -2,7 +2,7 @@
 
 #define PIN 2   // input pin Neopixel is attached to
 
-#define NUMPIXELS      4 // number of neopixels in strip
+#define NUMPIXELS      10 // number of neopixels in strip
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -34,8 +34,14 @@ void loop() {
     buttonCount = buttonCount + 1;
   }
   
+   // Yellow
+  if (buttonCount == 0) {
+    redColor = 255;
+    greenColor = 255;
+    blueColor = 0;
+  }
   // Green
-  if (buttonCount == 1) {
+  else if (buttonCount == 1) {
     redColor = 0;
     greenColor = 255;
     blueColor = 0;
@@ -54,37 +60,30 @@ void loop() {
     greenColor = 0;
     blueColor = 0;
   }
-
-  // Yellow
-  else if (buttonCount == 4) {
-    redColor = 255;
-    greenColor = 255;
-    blueColor = 0;
-  }
-
+ 
   // Cyan
-  else if (buttonCount == 5) {
+  else if (buttonCount == 4) {
     redColor = 0;
     greenColor = 255;
     blueColor = 255;
   }
 
   // Magenta
-  else if (buttonCount == 6) {
+  else if (buttonCount == 5) {
     redColor = 255;
     greenColor = 0;
     blueColor = 255;
   }
 
   // White
-  else if (buttonCount == 7) {
+  else if (buttonCount == 6) {
     redColor = 255;
     greenColor = 255;
     blueColor = 255;
   }
 
   // Off
-  else if (buttonCount == 8) {
+  else if (buttonCount == 7) {
     redColor = 0;
     greenColor = 0;
     blueColor = 0;
